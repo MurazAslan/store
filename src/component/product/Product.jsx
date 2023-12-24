@@ -11,7 +11,7 @@ const Product = ({ title, img, price, id }) => {
 
 
   const addBtn = () => {
-    if (!productCount) return;
+if (!productCount) return
     dispatch({
       type: 'add',id,
       payload: {
@@ -24,8 +24,8 @@ const Product = ({ title, img, price, id }) => {
   }
 
   const countProduct = (deyer) => {
-
     if (deyer === 'azalt') {
+      if(productCount <= 0) return;
       setProductCount(oldCount => oldCount - 1
       )
     }
