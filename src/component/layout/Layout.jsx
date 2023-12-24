@@ -8,7 +8,7 @@ const Layout = () => {
     const [productCount,setProductCount] = useState(0)
     useEffect(() => {
         state.filter((el,index) => {
-            setProductCount(oldCount => oldCount + el.count)
+            setProductCount(productCount + el.count)
         })
     },[state])
     return (

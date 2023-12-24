@@ -5,7 +5,7 @@ import { storeContext } from '../../context/StoreContext'
 
 const Product = ({ title, img, price, id }) => {
 
-  const { state, dispatch } = useContext(storeContext)
+  const {  dispatch } = useContext(storeContext)
   const [productCount, setProductCount] = useState(0)
 
 
