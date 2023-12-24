@@ -33,13 +33,11 @@ if (!productCount) return
       setProductCount(oldCount => oldCount + 1)
     }
   }
-
-
   return (
     <>
       <img src={img} alt="" />
       <h2>{title}</h2>
-      <p>${price}</p>
+      <p>${productCount >= 1 ? price * productCount : price   }</p>
       <div className={style.button}>
         <Button text={'+'} onClick={() => countProduct('artir')}>
 

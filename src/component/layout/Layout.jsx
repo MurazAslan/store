@@ -1,10 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import style from './layout.module.scss'
 import { storeContext } from '../../context/StoreContext'
 
 const Layout = () => {
     const {state,dispatch} = useContext(storeContext)
+    const [productCount,setProductCount] = useState(0)
+    useEffect(() => {
+        state.filter((el,index) => {
+            setProductCount(oldCount => oldCount + el.count)
+        })
+    },[state])
     return (
              <>
                 
@@ -23,7 +29,7 @@ const Layout = () => {
                 </li>
                 <li>
                     <Link to={'basket/'}>
-                        Basket {state.length !== 0 ? state.length : ''}
+                        Basket {productCount !== 0 ? productCount : ''}
                     </Link>
 
                 </li>

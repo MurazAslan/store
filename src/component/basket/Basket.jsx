@@ -7,14 +7,16 @@ const Basket = () => {
 
   return (
     <div className={style.basket}>
-      {state?.map((el,index) => (
-      <div className={style.basketBoxs}>
-     <p>Product: {el.title} </p>
-      <p>Product price: {el.price}$ </p>
-      <p>Product count: {el.count}</p>
-     </div>
-     ))}
-     
+      {state?.map((el, index) => (
+        <div className={style.basketBoxs}
+          key={index}
+        >
+          <p>Product: {el.title} </p>
+          <p>Product price: {el.price}$ </p>
+          <p>Product count: {el.count}</p>
+        </div>
+      ))}
+
     </div>
   )
 }
