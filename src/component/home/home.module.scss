@@ -1,0 +1,23 @@
+.homeContainer {
+    width: 90%;
+    margin: 5rem auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .box {
+        width: 30%;
+        padding-top: 1rem;
+        border: 1px solid #dedede;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+        }
+    }
+}
